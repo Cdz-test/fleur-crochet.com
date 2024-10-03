@@ -1,0 +1,83 @@
+<html><head>
+              <meta charset="UTF-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <title>traducteur</title>
+              <script src="https://cdn.tailwindcss.com"></script>
+              <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
+          <meta name="description" content="Decouvrez le traducteur multingual de ManoneFleur"></head>
+          <body>
+              <nav class="bg-white h-16 flex items-center justify-between px-4 shadow-md">
+                  <a href="./" data-index-id="66e98370331b97c549bfb9fc" id="index-link" class="text-gray-700 hover:text-blue-500">Accueil</a>
+              </nav><section class="bg-gray-100 p-10 min-h-screen flex items-center justify-center">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css">
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+<div class="bg-white p-8 rounded-lg shadow-lg max-w-3xl w-full">
+    <h2 class="text-3xl font-bold mb-6 text-center text-blue-600">
+        <i class="fas fa-language mr-2"></i>Traducteur Multilingue
+    </h2>
+    <div class="flex flex-col md:flex-row gap-4">
+        <div class="flex-1">
+            <label for="sourceText" class="block text-sm font-medium text-gray-700 mb-2">Texte source</label>
+            <textarea id="sourceText" rows="6" class="w-full p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" placeholder="Entrez le texte à traduire..."></textarea>
+        </div>
+        <div class="flex-1">
+            <label for="targetLanguage" class="block text-sm font-medium text-gray-700 mb-2">Langue cible</label>
+            <select id="targetLanguage" class="w-full p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
+                <option value="en">Anglais</option>
+                <option value="es">Espagnol</option>
+                <option value="de">Allemand</option>
+                <option value="it">Italien</option>
+                <option value="pt">Portugais</option>
+                <option value="ru">Russe</option>
+                <option value="zh">Chinois</option>
+                <option value="ja">Japonais</option>
+                <option value="ko">Coréen</option>
+                <option value="ar">Arabe</option>
+            </select>
+        </div>
+    </div>
+    <button id="translateBtn" class="mt-4 w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition duration-300 flex items-center justify-center">
+        <i class="fas fa-exchange-alt mr-2"></i>Traduire
+    </button>
+    <div class="mt-6">
+        <label for="translatedText" class="block text-sm font-medium text-gray-700 mb-2">Texte traduit</label>
+        <textarea id="translatedText" rows="6" class="w-full p-2 border border-gray-300 rounded-md bg-gray-50" readonly=""></textarea>
+    </div>
+</div>
+
+<script>
+document.getElementById('translateBtn').addEventListener('click', async function() {
+    const sourceText = document.getElementById('sourceText').value;
+    const targetLang = document.getElementById('targetLanguage').value;
+    const translatedTextArea = document.getElementById('translatedText');
+
+    if (!sourceText) {
+        alert('Veuillez entrer un texte à traduire.');
+        return;
+    }
+
+    try {
+        const response = await axios.get('https://api.mymemory.translated.net/get', {
+            params: {
+                q: sourceText,
+                langpair: `fr|${targetLang}`
+            }
+        });
+
+        if (response.data && response.data.responseData) {
+            translatedTextArea.value = response.data.responseData.translatedText;
+        } else {
+            throw new Error('Erreur de traduction');
+        }
+    } catch (error) {
+        console.error('Erreur:', error);
+        alert('Une erreur est survenue lors de la traduction. Veuillez réessayer.');
+    }
+});
+</script>
+</section>
+          
+      
+    </body></html>
