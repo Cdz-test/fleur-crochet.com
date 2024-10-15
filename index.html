@@ -106,7 +106,7 @@
     <span class="absolute right-0 w-2 -mr-2 bg-black h-3/4" x-ref="cursor"></span>
   </div>
 </div>
-    <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center"><a href="#about" class="mr-5 hover:text-gray-900">À propos</a><a href="#services" class="hover:text-gray-600 mr-5">Services</a><a href="#testimonials" class="hover:text-gray-600 mr-5">Témoignages</a><a href="contact" class="hover:text-gray-600 mr-5" id="page-link" data-page-id="6703c0240c4f1ee51ac9b18e">Contactez - nous</a></nav>
+    <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center"><a href="#about" class="mr-5 hover:text-gray-900">À propos</a><a href="#services" class="hover:text-gray-600 mr-5">Services</a><a href="#testimonials" class="hover:text-gray-600 mr-5">Témoignages</a><a href="contact" class="hover:text-gray-600 mr-5" id="page-link" data-page-id="6703c0240c4f1ee51ac9b18e">Contactez - nous</a><a href="cookie" id="page-link" data-page-id="67038c46ca660ebdf8869532" class="hover:text-gray-600 mr-5">cookie</a></nav>
   <a href="traducteur" class="hover:text-gray-600 mr-5" data-page-id="66ff0dead229284711fb23d6" id="page-link">  <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Traducteur<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
         <path d="M5 12h14M12 5l7 7-7 7"></path>
       </svg></button></a>
@@ -114,47 +114,8 @@
   </div>
 </header><section class="parallax bg-cover bg-center h-screen text-white flex items-center justify-center" style="background-image: url('https://images.unsplash.com/photo-1493246507139-91e8fad9978e?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2MjU1MDF8MHwxfHNlYXJjaHwyMHx8bmF0dXJlfGVufDB8MHx8fDE3MjcxMjY4NjZ8MA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080');">
         <div class="text-center">
-            <h2 class="text-4xl font-bold fade-in">Bienvenue chez ManoneCrochet</h2><h1 x-data="{
-        startingAnimation: { opacity: 0 },
-        endingAnimation: { opacity: 1, stagger: 0.08, duration: 2.7, ease: 'power4.easeOut' },
-        addCNDScript: true,
-        splitCharactersIntoSpans(element) {
-            const text = element.innerHTML;
-            const modifiedHTML = [];
-            for (let i = 0; i < text.length; i++) {
-                const span = document.createElement('span');
-                if (text[i].trim()) {
-                    span.setAttribute('class', 'inline-block');
-                }
-                span.textContent = text[i];
-                modifiedHTML.push(span.outerHTML);
-            }
-            element.innerHTML = modifiedHTML.join('');
-        },
-        addScriptToHead(url) {
-            script = document.createElement('script');
-            script.src = url;
-            document.head.appendChild(script);
-        },
-        animateText() {
-            $el.classList.remove('invisible');
-            gsap.fromTo($el.children, this.startingAnimation, this.endingAnimation);
-        }
-    }" x-init="
-        splitCharactersIntoSpans($el);
-        if(addCNDScript){
-            addScriptToHead('https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js');
-        }
-        gsapInterval3 = setInterval(function(){
-            if(typeof gsap !== 'undefined'){
-                animateText();
-                clearInterval(gsapInterval3);
-            }
-        }, 5);
-    " class="invisible block pb-0.5 overflow-hidden text-3xl font-bold custom-font">
-  Pines UI Library
-</h1>
-            <a href="cookie" id="page-link" data-page-id="67038c46ca660ebdf8869532" class="text-gray-700 hover:text-blue-500">cookie</a><p class="text-xl mt-4 fade-in">Découvrez des créations uniques en crochet et en laine</p>
+            <h2 class="text-4xl font-bold fade-in">Bienvenue chez ManoneCrochet</h2>
+            <p class="text-xl mt-4 fade-in">Découvrez des créations uniques en crochet et en laine</p>
         </div>
     </section><div class="flex flex-col w-full">
   <div x-data="" x-init="
@@ -425,85 +386,7 @@
 </div><section class="text-gray-600 body-font">
   <div class="container px-5 py-24 mx-auto flex flex-wrap items-center">
     <div class="lg:w-3/5 md:w-1/2 md:pr-16 lg:pr-0 pr-0">
-      <div>
-  <h1 x-data="{
-        startingAnimation: { opacity: 0, y: 50, rotation: '25deg' },
-        endingAnimation: { opacity: 1, y: 0, rotation: '0deg', stagger: 0.02, duration: 0.7, ease: 'back' },
-        addCNDScript: true,
-        splitCharactersIntoSpans(element) {
-            text = element.innerHTML;
-            modifiedHTML = [];
-            for (var i = 0; i < text.length; i++) {
-                attributes = '';
-                if(text[i].trim()){ attributes = 'class='inline-block''; }
-                modifiedHTML.push('<span ' + attributes + '>' + text[i] + '</span>');
-            }
-            element.innerHTML = modifiedHTML.join('');
-        },
-
-        addScriptToHead(url) {
-            script = document.createElement('script');
-            script.src = url;
-            document.head.appendChild(script);
-        },
-        animateText() {
-            $el.classList.remove('invisible');
-            gsap.fromTo($el.children, this.startingAnimation, this.endingAnimation);
-        }
-    }" x-init="
-        splitCharactersIntoSpans($el);
-        if(addCNDScript){
-            addScriptToHead('https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js');
-        }
-        gsapInterval2 = setInterval(function(){
-            if(typeof gsap !== 'undefined'){
-                animateText();
-                clearInterval(gsapInterval2);
-            }
-        }, 5);
-    " class="invisible block pb-0.5 overflow-hidden text-3xl font-bold custom-font">
-    Pines UI Library
-  </h1>
-  <div></div></div><h1 x-data="{
-        startingAnimation: { opacity: 0, y: 50, rotation: '25deg' },
-        endingAnimation: { opacity: 1, y: 0, rotation: '0deg', stagger: 0.02, duration: 0.7, ease: 'back' },
-        addCNDScript: true,
-        splitCharactersIntoSpans(element) {
-            const text = element.innerHTML;
-            const modifiedHTML = [];
-            for (let i = 0; i < text.length; i++) {
-                const span = document.createElement('span');
-                if (text[i].trim()) {
-                    span.setAttribute('class', 'inline-block');
-                }
-                span.textContent = text[i];
-                modifiedHTML.push(span.outerHTML);
-            }
-            element.innerHTML = modifiedHTML.join('');
-        },
-        addScriptToHead(url) {
-            script = document.createElement('script');
-            script.src = url;
-            document.head.appendChild(script);
-        },
-        animateText() {
-            $el.classList.remove('invisible');
-            gsap.fromTo($el.children, this.startingAnimation, this.endingAnimation);
-        }
-    }" x-init="
-        splitCharactersIntoSpans($el);
-        if(addCNDScript){
-            addScriptToHead('https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js');
-        }
-        gsapInterval2 = setInterval(function(){
-            if(typeof gsap !== 'undefined'){
-                animateText();
-                clearInterval(gsapInterval2);
-            }
-        }, 5);
-    " class="invisible block pb-0.5 overflow-hidden text-3xl font-bold custom-font">
-  Pines UI Library
-</h1><div x-data="{
+      <div x-data="{
         datePickerOpen: false,
         datePickerValue: '',
         datePickerFormat: 'M d, Y',
@@ -736,46 +619,7 @@
 </div><section class="text-gray-600 body-font">
   <div class="container px-5 py-24 mx-auto">
     <div class="flex flex-wrap w-full mb-20 flex-col items-center text-center">
-      <h1 x-data="{
-        startingAnimation: { opacity: 0, scale: 4 },
-        endingAnimation: { opacity: 1, scale: 1, stagger: 0.07, duration: 1, ease: 'expo.out' },
-        addCNDScript: true,
-        animateText() {
-            $el.classList.remove('invisible');
-            gsap.fromTo($el.children, this.startingAnimation, this.endingAnimation);
-        },
-        splitCharactersIntoSpans(element) {
-            const text = element.innerHTML;
-            const modifiedHTML = [];
-            for (let i = 0; i < text.length; i++) {
-                const span = document.createElement('span');
-                if (text[i].trim()) {
-                    span.setAttribute('class', 'inline-block');
-                }
-                span.textContent = text[i];
-                modifiedHTML.push(span.outerHTML);
-            }
-            element.innerHTML = modifiedHTML.join('');
-        },
-        addScriptToHead(url) {
-            script = document.createElement('script');
-            script.src = url;
-            document.head.appendChild(script);
-        }
-    }" x-init="
-        splitCharactersIntoSpans($el);
-        if(addCNDScript){
-            addScriptToHead('https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js');
-        }
-        gsapInterval = setInterval(function(){
-            if(typeof gsap !== 'undefined'){
-                animateText();
-                clearInterval(gsapInterval);
-            }
-        }, 5);
-    " class="invisible block text-3xl font-bold custom-font">
-  Pines UI Library
-</h1><h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">
+<h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">
         Pitchfork Kickstarter Taxidermy</h1>
       <p class="lg:w-1/2 w-full leading-relaxed text-gray-500">Whatever cardigan
         tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke
@@ -1324,84 +1168,8 @@
     <p class="text-2xl font-black leading-tight" x-text="text"></p>
     <span class="absolute right-0 w-2 -mr-2 bg-black h-3/4" x-ref="cursor"></span>
   </div>
-</div><h1 x-data="{
-    startingAnimation: { opacity: 0, y: 50, rotation: '25deg' },
-    endingAnimation: { opacity: 1, y: 0, rotation: '0deg', stagger: 0.02, duration: 0.7, ease: 'back' },
-    addCNDScript: true,
-    splitCharactersIntoSpans(element) {
-        text = element.innerHTML;
-        modifiedHTML = [];
-        for (var i = 0; i < text.length; i++) {
-            attributes = '';
-            if(text[i].trim()){ attributes = 'class='inline-block''; }
-            modifiedHTML.push('<span ' + attributes + '>' + text[i] + '</span>');
-        }
-        element.innerHTML = modifiedHTML.join('');
-    },
-
-    addScriptToHead(url) {
-        script = document.createElement('script');
-        script.src = url;
-        document.head.appendChild(script);
-    },
-    animateText() {
-        $el.classList.remove('invisible');
-        gsap.fromTo($el.children, this.startingAnimation, this.endingAnimation);
-    }
-}" x-init="
-    splitCharactersIntoSpans($el);
-    if(addCNDScript){
-        addScriptToHead('https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js');
-    }
-    gsapInterval2 = setInterval(function(){
-        if(typeof gsap !== 'undefined'){
-            animateText();
-            clearInterval(gsapInterval2);
-        }
-    }, 5);
-" class="invisible block pb-0.5 overflow-hidden text-3xl font-bold custom-font">
-  Pines UI Library
-</h1>
-      <h1 x-data="{
-        startingAnimation: { opacity: 0 },
-        endingAnimation: { opacity: 1, stagger: 0.08, duration: 2.7, ease: 'power4.easeOut' },
-        addCNDScript: true,
-        splitCharactersIntoSpans(element) {
-            const text = element.innerHTML;
-            const modifiedHTML = [];
-            for (let i = 0; i < text.length; i++) {
-                const span = document.createElement('span');
-                if (text[i].trim()) {
-                    span.setAttribute('class', 'inline-block');
-                }
-                span.textContent = text[i];
-                modifiedHTML.push(span.outerHTML);
-            }
-            element.innerHTML = modifiedHTML.join('');
-        },
-        addScriptToHead(url) {
-            script = document.createElement('script');
-            script.src = url;
-            document.head.appendChild(script);
-        },
-        animateText() {
-            $el.classList.remove('invisible');
-            gsap.fromTo($el.children, this.startingAnimation, this.endingAnimation);
-        }
-    }" x-init="
-        splitCharactersIntoSpans($el);
-        if(addCNDScript){
-            addScriptToHead('https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js');
-        }
-        gsapInterval3 = setInterval(function(){
-            if(typeof gsap !== 'undefined'){
-                animateText();
-                clearInterval(gsapInterval3);
-            }
-        }, 5);
-    " class="invisible block pb-0.5 overflow-hidden text-3xl font-bold custom-font">
-  Pines UI Library
-</h1><p class="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan
+</div>
+<p class="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan
         tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke
         farm-to-table. Franzen you probably haven't heard of them.</p>
     </div>
